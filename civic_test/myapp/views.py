@@ -38,9 +38,9 @@ def run_pipeline(request):
         i = 1
         for d in data:
             if d not in map:
-                res[i] = "Invalid Request Number"
+                res["Task "+repr(i)] = "Invalid Request Number"
             else:
-                res[i] = map[d].processTask(df, data, list)
+                res["Task "+repr(i)] = map[d].processTask(df, data, list)
             i += 1    
         return JsonResponse(res) 
     except ValueError:
