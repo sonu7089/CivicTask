@@ -13,7 +13,7 @@ class DuplicateTask:
             if len(cols) == 0:
                 cols = list
             dup = df[df.duplicated(cols)]
-            print("Number of Duplicates: "+ len(dup))
+            print("Number of Duplicates: "+ repr(len(dup)))
             return len(dup)
         except ValueError:
             return "Wrong Json Values"
